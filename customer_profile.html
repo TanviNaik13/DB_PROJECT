@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Customer Profile</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="set()">
+	<header>
+			<h2>CUSTOMER PROFILE</h2>
+			<hr>
+	</header>
+<center><br><br>
+<h1>Would like to delete your account? </h1><br><br>
+	<input id="Profile_Button" type="button" value="CLICK HERE" onclick="window.location.href='php/customer_profile_delete.php'">
+<br><br>
+<h1>Log Out: </h1><br><br>
+	<input type="button" id="Profile_Button" value="Log Out" onclick="window.location.href='php/customer_logout.php'">
+<br><br><hr><br>
+        <h1>Select the options you want to edit:</h1>
+</center>
+<form id="updf" method="post" action="php/customer_profile_update.php">
+    <div id="c_updateform">
+        <input type="checkbox" class="cust_profile_checkbox" name="cust[]" value="name"> Name <br>
+        <input type="checkbox" class="cust_profile_checkbox" name="cust[]" value="email"> Email<br>
+        <input type="checkbox" class="cust_profile_checkbox" name="cust[]" value="Password"> Password<br>
+        <input type="checkbox" class="cust_profile_checkbox" name="cust[]" value="dob"> Dob<br>
+        <input type="checkbox" class="cust_profile_checkbox" name="cust[]" value="phone"> Phone<br>
+        <input type="checkbox" class="cust_profile_checkbox" name="cust[]" value="gender"> Gender<br>
+        <input type="checkbox" class="cust_profile_checkbox" name="cust[]" value="district"> District <br>
+        <input type="checkbox" class="cust_profile_checkbox" name="cust[]" value="address"> Address <br><br>
+        <input id="Profile_Button" type="button" value="Modify" onclick="display()">
+    </div>
+	
+    <div id="c_input_value"><br>
+		<div id="name">
+			<label>Enter your Name :</label>
+			<input type="text" name="cust_name" value=" "><br><br>
+		</div>
+		<div id="email">
+			<label>Enter your Email:</label>
+			<input type="text" name="cust_email" value=" "><br><br>
+		</div>
+		<div id="Password">
+			<label>Enter you Password :</label>
+			<input type="password" name="cust_passwd" value=" "><br><br>
+		</div>
+		<div id="dob">
+			<label>Select DOB :</label>
+			<input type="date" name="cust_dob" value=" "><br><br>
+		</div>
+		<div id="phone">
+			<label>Enter you Phone number :</label>
+			<input type="number" min="7000000000" max="9999999999" value=" " name="cust_phone"><br>
+			<br>
+		</div>
+
+		<div id="gender">
+			<label  >Gender :</label><br>
+			<input type="radio"  name="cust_gender"  value=" " checked>None
+			<input type="radio"  name="cust_gender"  value="male">Male
+			<input type="radio"  name="cust_gender"  value="female">Female
+			<input type="radio"  name="cust_gender"  value="other">Other<br><br>
+		</div>
+
+		<div id="district">
+			<label  >Select your district :</label><br>
+			<input type="radio"  name="cust_dist"  value=" " checked>None
+			<input type="radio"  name="cust_dist"  value="north">North
+			<input type="radio"  name="cust_dist"  value="south">South<br><br>
+	    </div>
+		 
+		<div id="address">
+			<label>Enter your address :</label><br>
+            <textarea name="cust_address"  cols="30" rows="5"></textarea><br><br>
+		</div>
+        
+        <input id="Profile_Button" type="submit">
+        <input id="Profile_Button" type="reset">
+    </div>
+
+</form>
+
+<footer>
+    <hr>
+    <div id="df2">
+        <center><p>Mithee Meals</p></center>
+        <center><p>Contact : 098654311</p></center>
+        <center><p>Email ID : mitheemeals@gmail.com</p></center>
+    </div>
+    
+</footer>
+
+<script>
+    function set(){
+        document.getElementById("c_input_value").style.display = 'none';
+    }
+
+    function display() {
+    var inputs = document.getElementsByClassName('cust_profile_checkbox');
+    var flag = false;
+
+    for (var i = 0; i < inputs.length; i++) {
+        var fieldName = inputs[i].value;
+        var fieldElement = document.getElementById(fieldName);
+        if (inputs[i].checked && fieldElement) {
+            fieldElement.style.display = "block";
+            flag = true;
+        } else if (fieldElement) {
+            fieldElement.style.display = "none";
+        }
+    }
+
+    if (!flag) {
+        alert('Please select at least one Checkbox!');
+        return;
+    }
+
+    document.getElementById('c_updateform').style.display = 'none';
+    document.getElementById("c_input_value").style.display = 'block';
+}
+
+</script>
+
+</body>
+</html>

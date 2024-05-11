@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sign Up Page</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body >
+		
+		<header>
+			<h2>CUSTOMER REGISTRATION</h2>
+			<hr>
+		</header>
+		<br><br>
+		<div id="d1">
+		<img id="im1" src="img/user.png"><h2 id="u1">REGISTER</h2></img><br><br>
+		<form method="post" action="php/customer_reg.php" autocomplete="on">
+			<label>Enter Your Name: </label><br>
+			<input class="midc" type="text" name="name" maxlength="20" id="fn" placeholder="Name" autofocus ><br><br>
+			
+			<label>Enter Email-id: </label><br>
+			<input class="midc" type="email" name="email"  placeholder="email" >
+			<br><br>
+			<label>Enter Password: </label><br>
+			<input class="midc" type="password" name="password" placeholder="password" ><br><br>
+			
+			<label>Enter DOB: </label>
+			<input class="midc" type="date" name="dob" ><br><br>
+			<label>Mobile Number:</label>
+            <input class="midc" type="number" name="phone" >
+			<br><br>
+			<label>Select your gender : </label><br>
+			<input type="radio" id="M" name="gender" value="male" checked required>Male<br>
+			<input type="radio" id="F" name="gender" value="female">Female<br>
+			<input type="radio" id="O" name="gender" value="other">Other<br><br>
+			<label>Enter Your Location: </label><br>
+			<select name="district">
+				<option id="N"  value="NORTH">North Goa</option>
+				<option id="S" value="SOUTH">South Goa</option>
+			</select>
+			<br><br>
+			<label >Address:</label>
+            <textarea name="address" id="" cols="30" rows="5"></textarea>
+			<br><br>
+			<label>Select Language:</label><br><br>
+			<input type="checkbox" name="lang[]" value="english" checked>English
+			<input type="checkbox" name="lang[]" value="hindi">Hindi
+			<input type="checkbox" name="lang[]" value="marathi">Marathi
+			<input type="checkbox" name="lang[]" value="konkani">Konkani <br><br>
+			<input id="Profile_Button" type="reset" value="Reset">
+			<input id="Profile_Button" type="submit" value="Submit" style="margin-left:50%;"><br>
+		</form>
+		</div>
+		<footer>
+		<hr>
+		<div id="df2">
+		</div>
+		</footer>
+	</body>
+</html>

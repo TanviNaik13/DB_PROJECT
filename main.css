@@ -1,0 +1,167 @@
+h1
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 	
+	display:inline;
+}
+h2
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 44px; color: #ff3366; text-align: center;
+    padding-top:2%;
+    padding-bottom:2%;
+    color:white;
+    background-color:#784B99;
+    margin:0;
+}
+hr
+{
+    height:2px;
+    color:gray;
+    background-color:gray;
+}
+
+form
+{
+    margin-left:20%;
+    font: small-caps 15px Verdana; 
+    font-size:20px;
+	
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+	margin-top:2%;
+    width: 100%;
+    height:auto;
+	order: 2;
+}
+body
+{
+	color:white;
+	background-color:black;
+}
+#d1
+{
+    border:2px solid gray;
+    width:40%;
+    margin-top:-2%;
+    margin-left:25%;
+    padding:2%;
+}
+
+#im1
+{
+    display:block; 
+    margin-left:auto; 
+    margin-right:auto; 
+    width:250px;
+    height:15%;
+}
+
+#u1
+{
+    font-size:x-large;
+    background-color: black;
+    text-align:center;
+    color:grey;
+}
+
+#df2
+{
+    padding:4%;
+    background-color:#784B99;
+}
+
+.meal {
+    margin: 70px; 
+    width: 40%; 
+    height: auto; 
+    display: inline-block;
+}
+
+.m1
+{
+    border: 1px solid #000;
+    font-size:xx-large;
+    color: black;
+    background-color:white;
+}
+
+p
+{
+    font-size:x-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+img
+{
+    width: 400px;
+    height: 260px;
+}
+.b1
+{
+    font-size: x-large;
+}
+
+#buttons
+{
+	margin:5%;
+	text-align:center;
+}
+#Profile_Button
+{
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+	font-size:20px;
+	font-weight:bold;
+	width:20%;
+	height:50px;
+	background-color: #E6E6FA;
+	border: 2px solid gray;
+    border-radius: 10px;
+}
+#c_updateform
+{
+	font-size:30px;
+	margin-left:45%;
+	margin-top:1%;
+}
+#updateform
+{
+	font-size:30px;
+	margin-left:40%;
+	margin-top:1%;
+}
+#updf
+{
+	margin-left:0%;
+	
+}
+#c_input_value
+{
+	margin-left:40%;
+}
+#m_input_value
+{
+	margin-left:30%;
+}
+
+#mid1
+{
+	height:50px;
+	width:50%;
+	border-radius:10px;
+}
+a
+{
+	color:gray;
+}
+
+.midc
+{
+	height:50px;
+	width:50%;
+	border-radius:10px;
+}	

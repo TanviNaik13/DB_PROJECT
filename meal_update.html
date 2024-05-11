@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Meal Update</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body onload="set()">
+		<header>
+			<h2>MEAL UPDATE</h2>
+			<hr>
+		</header>
+<p style="color:red;"><b>*Note:</b> Check the Meal on meal_id before updating.</p>
+
+<form method="post" action="php/findMeal.php" target="_blank">
+
+    <h1>Enter the ID</h1><br>
+    <input type="number" min="1" name="search_id" id="mid1" required>
+    <input id="Profile_Button" type="submit" value="Search"><br>
+	<br><br><br>
+        <h1>Select the options you want to edit:</h1>
+</form>
+
+<form id="updf" method="post" action="php/meal_update.php">
+    <div id="updateform"><br>
+        <input type="checkbox" class="meal_checkbox" name="meal[]" value="meal_name"> Meal Name <br>
+        <input type="checkbox" class="meal_checkbox" name="meal[]" value="meal_type"> Meal Type<br>
+        <input type="checkbox" class="meal_checkbox" name="meal[]" value="meal_goal"> Meal Goal<br>
+        <input type="checkbox" class="meal_checkbox" name="meal[]" value="price"> Meal Price<br>
+        <input type="checkbox" class="meal_checkbox" name="meal[]" value="meal_img"> Meal Image<br>
+        <input type="checkbox" class="meal_checkbox" name="meal[]" value="quantity"> Meal Quantity<br><br>
+        <input id="Profile_Button" type="button" value="Modify" onclick="display()">
+    </div>
+    <div id="m_input_value">
+        <br>
+		<div id="meal_name">
+			<label>Enter the Meal Name :</label>
+			<input type="text" name="m_name" value=" "><br><br>
+		</div>
+
+		<div id="meal_type">
+			<label  >Select the Meal Type :</label>
+			<input type="radio"  name="m_type"  value=" " checked>None
+			<input type="radio"  name="m_type"  value="veg">Veg
+			<input type="radio"  name="m_type"  value="nonveg">Non-Veg
+			<input type="radio"  name="m_type"  value="vegan">Vegan<br><br>
+		</div>
+
+		<div id="meal_goal">
+			<label  >Select the Meal Goal :</label>
+			<input type="radio"  name="m_goal"  value=" " checked>None
+			<input type="radio"  name="m_goal"  value="weight gain">Weight Gain
+			<input type="radio"  name="m_goal"  value="weight loss">Weight Loss
+			<input type="radio"  name="m_goal"  value="weight balance">Weight Balance<br><br>
+	    </div>
+		 
+		<div id="price">
+			<label  >Enter the Meal Price :</label>
+			<input type="number" name="m_price" value=" "><br><br>
+		</div>
+
+		<div id="meal_img">
+			<label  >Enter the Meal Image name :</label>
+			<input type="text" name="m_img" value=" "><br><br>
+		</div>
+
+		<div id="quantity">
+			<label  >Enter the Meal Quantity :</label>
+			<input type="text" name="m_qty" value=" "><br><br>
+		</div>
+        
+        <input id="Profile_Button" type="submit">
+        <input id="Profile_Button" type="reset">
+    </div>
+</form>
+
+<footer>
+    <hr>
+    <div id="df2"></div>
+</footer>
+
+<script>
+    function set(){
+        document.getElementById("m_input_value").style.display = 'none';
+    }
+
+    function display() {
+    var inputs = document.getElementsByClassName('meal_checkbox');
+    var flag = false;
+
+    for (var i = 0; i < inputs.length; i++) {
+        var fieldName = inputs[i].value;
+        var fieldElement = document.getElementById(fieldName);
+        if (inputs[i].checked && fieldElement) {
+            fieldElement.style.display = "block";
+            flag = true;
+        } else if (fieldElement) {
+            fieldElement.style.display = "none";
+        }
+    }
+
+    if (!flag) {
+        alert('Please select at least one Checkbox!');
+        return;
+    }
+
+    document.getElementById('updateform').style.display = 'none';
+    document.getElementById("m_input_value").style.display = 'block';
+}
+
+</script>
+
+</body>
+</html>

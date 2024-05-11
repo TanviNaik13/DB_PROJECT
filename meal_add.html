@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Add Meal Page</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<header>
+			<h2>ADMIN CONTROL</h2>
+			<hr>
+		</header>
+		<br><br>
+		<div id="meals"></div>
+		
+		<form style=" text-align:left;" action="php/meal_add.php" method="POST">
+			<h1>Enter New Meal Details :</h1><br><br>
+			<label>Enter Meal Name : </label>
+			<input type="text" name="mealname" placeholder="meal name"><br><br>
+			
+			<label>Choose Meal Type : </label>		
+			<input type="radio" name="mealtype" value="veg">Veg
+			<input type="radio" name="mealtype" value="nonveg">Non-Veg
+			<input type="radio" name="mealtype" value="vegan">Vegan<br><br>
+			
+			<label>Choose Meal Goal : </label>		
+			<select name="mealgoal">
+				<option value="none">None</option>
+				<option >Weight Gain</option>
+				<option >Weight Loss</option>
+				<option >Weight Balance</option>  
+			</select><br><br>
+			
+			
+			<label>Price : </label>
+			<input type="number" max=1000 min=100 placeholder="399" name="price"><br><br>
+			<label>Enter meal image name : </label>
+			<input type="text"  placeholder="meal1.png" name="mealimg"><br><br>
+			<label>Enter the Quantity : </label>
+			<input type="number"  min="0" name="quantity"><br><br>
+			<input id="Profile_Button" type="submit">
+			<input id="Profile_Button" type="reset">
+		</form>
+		<footer>
+		<hr>
+		<div id="df2">
+		</footer>
+		</div>
+		
+		
+	</body>
+</html>
